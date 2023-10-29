@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="251.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.newDiaryEntry.NewDiaryEntryController">
+   <children>
+      <TextField fx:id="foodTextbox" layoutX="149.0" layoutY="98.0" prefHeight="26.0" prefWidth="126.0" promptText="z.B: Milch,Eier,...etc." />
+      <TextField fx:id="drugTextbox" layoutX="444.0" layoutY="98.0" prefHeight="26.0" prefWidth="126.0" promptText="z.B: aspirin,..,etc." />
+      <TextField fx:id="descriptionTextbox" layoutX="747.0" layoutY="98.0" prefHeight="26.0" prefWidth="126.0" promptText="Beschreibung" />
+      <Button fx:id="saveEntryButton" layoutX="686.0" layoutY="202.0" mnemonicParsing="false" onAction="#saveButtonHandler" text="Speichern" />
+      <Label layoutX="5.0" layoutY="78.0" text="Zeit:" />
+      <Label layoutX="149.0" layoutY="78.0" text="Lebensmittel:" />
+      <Label layoutX="444.0" layoutY="78.0" text="Medikament:" />
+      <Label layoutX="590.0" layoutY="78.0" text="Menge:" />
+      <Label layoutX="747.0" layoutY="78.0" text="Anmerkung:" />
+      <Label layoutX="308.0" layoutY="55.0" prefHeight="16.0" prefWidth="98.0" text="Eingenommen" />
+      <Button fx:id="addEntryButton" layoutX="686.0" layoutY="153.0" mnemonicParsing="false" onAction="#addEntryHandler" text="+" />
+      <ChoiceBox fx:id="Unit1ComboBox" layoutX="369.0" layoutY="98.0" prefHeight="26.0" prefWidth="63.0" />
+      <ChoiceBox fx:id="unit2ComboBox" layoutX="669.0" layoutY="98.0" prefHeight="26.0" prefWidth="63.0" />
+      <Label layoutX="284.0" layoutY="78.0" text="Menge:" />
+      <Label layoutX="369.0" layoutY="78.0" text="Einheit:" />
+      <Label layoutX="668.0" layoutY="78.0" text="Einheit:" />
+      <TextField fx:id="areaTextBox" editable="false" layoutX="14.0" layoutY="140.0" prefHeight="97.0" prefWidth="654.0" />
+      <Label layoutX="341.0" layoutY="14.0" prefHeight="26.0" prefWidth="206.0" text="Eintrag Hinzufügen">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="unit1" editable="true" layoutX="284.0" layoutY="98.0" prefHeight="26.0" prefWidth="73.0" />
+      <Spinner fx:id="unit2" editable="true" layoutX="590.0" layoutY="98.0" prefHeight="26.0" prefWidth="73.0" />
+      <Spinner fx:id="hours" cache="true" editable="true" layoutX="5.0" layoutY="98.0" prefHeight="26.0" prefWidth="49.0" />
+      <Spinner fx:id="minute" editable="true" layoutX="68.0" layoutY="98.0" prefHeight="26.0" prefWidth="49.0" />
+      <Label layoutX="58.0" layoutY="100.0" text=":">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

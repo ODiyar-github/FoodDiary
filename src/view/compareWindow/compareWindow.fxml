@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.compareWindow.CompareWindowController">
+  <items>
+    <AnchorPane>
+         <children>
+            <Label fx:id="nameDiary1" layoutX="14.0" layoutY="14.0" text="Aktuelles Tagebuch" />
+            <TableView fx:id="tableViewDiary1" layoutX="14.0" layoutY="36.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="354.0" prefWidth="265.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+              <columns>
+                <TableColumn fx:id="colTime1" prefWidth="75.0" text="Zeit" />
+                <TableColumn prefWidth="143.0" text="Eingenommen">
+                     <columns>
+                        <TableColumn fx:id="colFood1" prefWidth="75.0" text="Lebensmittel" />
+                        <TableColumn fx:id="colDrug1" prefWidth="75.0" text="Medikament" />
+                     </columns></TableColumn>
+                  <TableColumn fx:id="colDescription1" prefWidth="75.0" text="Anmerkung" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+    <AnchorPane prefHeight="490.0" prefWidth="451.0">
+         <children>
+            <Label fx:id="nameDiary2" layoutX="14.0" layoutY="14.0" text="Vergleichstagebuch" />
+            <TableView fx:id="tableViewDiary2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="354.0" prefWidth="265.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <columns>
+                  <TableColumn fx:id="colTime2" prefWidth="75.0" text="Zeit" />
+                  <TableColumn prefWidth="147.0" text="Eingenommen">
+                     <columns>
+                        <TableColumn fx:id="colFood2" prefWidth="75.0" text="Lebensmittel" />
+                        <TableColumn fx:id="colDrug2" prefWidth="75.0" text="Medikament" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colDescription2" prefWidth="78.0" text="Anmerkung" />
+               </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

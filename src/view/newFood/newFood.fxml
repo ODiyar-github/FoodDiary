@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.newFood.newFoodController">
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="120.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label text="Name" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <TextField fx:id="foodName" onAction="#setFoodName" prefHeight="26.0" prefWidth="104.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="50.0" prefWidth="120.0" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label text="Kalorien" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <TextField fx:id="foodCalorine" onAction="#setFoodCalorine" prefHeight="26.0" prefWidth="104.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="50.0" prefWidth="120.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label text="Kohlenhydrate" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <TextField fx:id="foodCabonhydrate" onAction="#setFoodCabonhydrate" prefHeight="26.0" prefWidth="104.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="50.0" prefWidth="120.0" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <TextField fx:id="foodProtein" onAction="#setFoodProtein" prefHeight="26.0" prefWidth="104.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+            <Label text="Eiweiß" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="50.0" prefWidth="120.0" AnchorPane.leftAnchor="490.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label text="Fett" />
+            <TextField fx:id="foodFat" onAction="#setFoodFat" prefHeight="26.0" prefWidth="104.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="50.0" prefWidth="120.0" AnchorPane.leftAnchor="610.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <TextField fx:id="foodIngredient" onAction="#setFoodIngredient" prefHeight="26.0" prefWidth="133.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+            <Label text="Inhaltsstoffe" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="saveButton" layoutX="652.0" layoutY="153.0" mnemonicParsing="false" onAction="#createNewFoodEntry" text="Speichern" AnchorPane.topAnchor="100.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="day" fx:id="dayView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.mainWindow.InnerWindowDayController">
+   <children>
+      <TabPane fx:id="tabFenster" onMouseClicked="#abc" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE"  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tabTagebuch" text="Tagebuch">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="diaryDayView" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="tagebuchTabelle" editable="true" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="zeit" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="Zeit" />
+                                    <TableColumn fx:id="eingenommen" maxWidth="1.7976931348623157E308" prefWidth="-1.0" text="Eingenommen">
+                                       <columns>
+                                          <TableColumn fx:id="lebensmittel" maxWidth="1.7976931348623157E308" minWidth="130.0" prefWidth="-1.0" text="Lebensmittel" />
+                                          <TableColumn fx:id="medikament" maxWidth="1.7976931348623157E308" minWidth="130.0" prefWidth="-1.0" text="Medikament" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn fx:id="menge" maxWidth="1.7976931348623157E308" minWidth="80.0" prefWidth="-1.0" text="Menge" />
+                                    <TableColumn fx:id="anmerkung" maxWidth="1.7976931348623157E308" minWidth="180.0" prefWidth="-1.0" text="Anmerkung" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <ToolBar fx:id="wlTagebuch" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <items>
+                                    <MenuButton fx:id="ansichtTagebuch" mnemonicParsing="false" text="Ansicht">
+                                       <items>
+                                          <MenuItem fx:id="tagesansicht" mnemonicParsing="false" text="Tagesansicht">
+                                             <graphic>
+                                                <DatePicker fx:id="datePicker" minWidth="150.0" onAction="#openDay" prefWidth="150.0" />
+                                             </graphic>
+                                          </MenuItem>
+                                          <MenuItem fx:id="monatsansicht" mnemonicParsing="false" text="Monatsansicht">
+                                             <graphic>
+                                                <MenuButton fx:id="monat" minWidth="150.0" mnemonicParsing="false" text="Monat">
+                                                   <items>
+                                                      <MenuItem fx:id="january" mnemonicParsing="false" onAction="#openJanuary" text="Januar" />
+                                                      <MenuItem fx:id="february" mnemonicParsing="false" onAction="#openFebruary" text="Februar" />
+                                                      <MenuItem fx:id="march" mnemonicParsing="false" onAction="#openMarch" text="März" />
+                                                      <MenuItem fx:id="april" mnemonicParsing="false" onAction="#openApril" text="April" />
+                                                      <MenuItem fx:id="may" mnemonicParsing="false" onAction="#openMay" text="Mai" />
+                                                      <MenuItem fx:id="june" mnemonicParsing="false" onAction="#openJune" text="Juni" />
+                                                      <MenuItem fx:id="july" mnemonicParsing="false" onAction="#openJuly" text="Juli" />
+                                                      <MenuItem fx:id="august" mnemonicParsing="false" onAction="#openAugust" text="August" />
+                                                      <MenuItem fx:id="september" mnemonicParsing="false" onAction="#openSeptember" text="September" />
+                                                      <MenuItem fx:id="october" mnemonicParsing="false" onAction="#openOctober" text="Oktober" />
+                                                      <MenuItem fx:id="november" mnemonicParsing="false" onAction="#openNovember" text="November" />
+                                                      <MenuItem fx:id="december" mnemonicParsing="false" onAction="#openDecember" text="Dezember" />
+                                                   </items>
+                                                </MenuButton>
+                                             </graphic>
+                                          </MenuItem>
+                                          <MenuItem fx:id="jahresansicht" mnemonicParsing="false" text="Jahresansicht">
+                                             <graphic>
+                                                <MenuButton fx:id="jahr" minWidth="150.0" mnemonicParsing="false" text="Jahr">
+                                                   <items>
+                                                      <MenuItem fx:id="j2017" mnemonicParsing="false" onAction="#open2017" text="2017" />
+                                                   </items>
+                                                </MenuButton>
+                                             </graphic>
+                                          </MenuItem>
+                                       </items>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                            <items>
+                                              <MenuItem mnemonicParsing="false" text="test 1" />
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </MenuButton>
+                                 </items>
+                              </ToolBar>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabLebensmittel" text="Lebensmittel">
+               <content>
+                  <AnchorPane fx:id="lebensmittelFenster" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ToolBar fx:id="wlLebensmittel" layoutY="248.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <items>
+                              <MenuButton fx:id="ansichtLebensmittel" mnemonicParsing="false" text="Ansicht">
+                                 <items>
+                              		<MenuItem fx:id="alleLebensmittel" mnemonicParsing="false" text="Alle" />
+                              		<MenuItem fx:id="favoritenLebensmittel" mnemonicParsing="false" text="Favoriten" />
+                           		</items>
+                              </MenuButton>
+                           </items>
+                        </ToolBar>
+                        <TableView fx:id="lebensmittelTabelle" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                            <TableColumn fx:id="lebensmittelName" maxWidth="1.7976931348623157E308" minWidth="75.0" prefWidth="-1.0" text="Name" />
+                            <TableColumn fx:id="kalorien" maxWidth="1.7976931348623157E308" minWidth="80.0" prefWidth="-1.0" text="Kalorien" />
+                              <TableColumn fx:id="kohlenhydrate" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="-1.0" text="Kohlenhydrate" />
+                              <TableColumn fx:id="eiweiss" maxWidth="1.7976931348623157E308" minWidth="130.0" prefWidth="-1.0" text="Eiweiß" />
+                              <TableColumn fx:id="fett" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="-1.0" text="Fett" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabMedikamente" text="Medikamente">
+               <content>
+                  <AnchorPane fx:id="medikamenteFenster" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ToolBar fx:id="wlMedikamente" layoutY="248.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <items>
+                              <MenuButton fx:id="ansichtMedikamente" mnemonicParsing="false" text="Ansicht">
+                                 <items>
+                              		<MenuItem fx:id="alleMedikamente" mnemonicParsing="false" text="Alle" />
+                              		<MenuItem fx:id="favoritenMedikamente" mnemonicParsing="false" text="Favoriten" />
+                           		</items>
+                              </MenuButton>
+                           </items>
+                        </ToolBar>
+                        <TableView fx:id="medikamenteTabelle" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                            <TableColumn fx:id="medikamentName" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="-1.0" text="Name" />
+                            <TableColumn fx:id="wirkstoff" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" text="Wirkstoff" />
+                              <TableColumn fx:id="nebenwirkung" maxWidth="1.7976931348623157E308" minWidth="285.0" prefWidth="-1.0" text="Nebenwirkung" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabInhaltsstoffe" text="Inhaltsstoffe">
+               <content>
+                  <AnchorPane fx:id="inhaltsstoffeFenster" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ToolBar fx:id="wlInhaltsstoffe" layoutY="248.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <items>
+                              <MenuButton fx:id="ansichtInhaltsstoffe" mnemonicParsing="false" text="Ansicht">
+                                 <items>
+                              		<MenuItem fx:id="alleInhaltsstoffe" mnemonicParsing="false" text="Alle" />
+                              		<MenuItem fx:id="favoritenInhaltsstoffe" mnemonicParsing="false" text="Favoriten" />
+                           		</items>
+                              </MenuButton>
+                           </items>
+                        </ToolBar>
+                        <TableView fx:id="inhaltsstoffeTabelle" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        	<columns>
+                            <TableColumn fx:id="inhaltsstoffName" maxWidth="1.7976931348623157E308" minWidth="80.0" prefWidth="-1.0" text="Name" />
+                            <TableColumn fx:id="gefahrstoff" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="-1.0" text="Gefahrenstoff" />
+                            <TableColumn fx:id="inhaltstoffMedikament" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="-1.0" text="Medikamente" />
+                            <TableColumn fx:id="inhaltstoffLebensmittel" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" text="Lebensmittel" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

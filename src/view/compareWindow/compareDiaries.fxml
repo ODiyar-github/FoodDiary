@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.compareWindow.CompareDiariesController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="630.0">
+         <children>
+            <CheckBox fx:id="checkBox" layoutX="420.0" layoutY="186.0" mnemonicParsing="false" onAction="#complianceSelected" />
+            <DatePicker fx:id="untilDateChooser" layoutX="426.0" layoutY="84.0" onAction="#chooseDateUntil" prefHeight="26.0" prefWidth="150.0" promptText="Bis" />
+            <DatePicker fx:id="fromDateChooser" layoutX="426.0" layoutY="55.0" onAction="#chooseDateFrom" prefHeight="26.0" prefWidth="150.0" promptText="Von" />
+            <ComboBox fx:id="foodButton" editable="true" layoutX="420.0" layoutY="232.0" onAction="#selectFood" prefWidth="150.0" promptText="Lebensmittel" />
+            <ComboBox fx:id="ingredientButton" editable="true" layoutX="420.0" layoutY="332.0" onAction="#selectIngredient" prefWidth="150.0" promptText="Inhaltsstoffe" />
+            <ComboBox fx:id="drugButton" editable="true" layoutX="420.0" layoutY="282.0" onAction="#selectDrug" prefWidth="150.0" promptText="Medikamente" />
+            <Text layoutX="37.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zeitraum des Vergleichs" wrappingWidth="248.82666015625" />
+            <Text layoutX="37.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welche Lebensmittel sollen verglichen werden?" />
+            <Text layoutX="37.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welche Medikamente sollen verglichen werden?" />
+            <Text layoutX="37.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welche Inhaltsstoffe sollen verglichen werden?" />
+            <Text layoutX="37.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nur Einträge mit Beschwerden vergleichen?" />
+            <Button fx:id="startCompareButton" layoutX="420.0" layoutY="377.0" mnemonicParsing="false" onAction="#startCompare" prefHeight="26.0" prefWidth="150.0" text="Vergleich starten" />
+            <ChoiceBox fx:id="comparreDiaryButton" layoutX="420.0" layoutY="134.0" onDragDetected="#chooseDiary" prefHeight="26.0" prefWidth="150.0" />
+            <Text layoutX="37.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zu vergleichendes Tagebuch" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
